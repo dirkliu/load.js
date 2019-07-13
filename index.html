@@ -9,9 +9,7 @@
     <div class="close">test load script</div>
   </a>
 </div>
-  <div class="tuia-box">test load script</div>
   <script>
-    console.log('loadScript:', loadScript)
     loadScript('./test.js', function () {
       console.log('testInfo:', testInfo)
       console.log('testName:', testName)
@@ -19,7 +17,6 @@
       appKey: 'e8e29eo39d',
       adSpaceId: '26966'
     })
-    var style = document.createElement('style')
     var styleText = `
 .tuia-box {
   height: 100%;
@@ -34,7 +31,6 @@
 .tuia-box .close {
   width: 30px;
   height: 30px;
-  background-image: url(//yun.tuisnake.com/h5-mami/couponPrize/close.png);
   background-size: 100% 100%;
   background-color: #666;
   border-radius: 50%;
@@ -48,13 +44,7 @@
   right: 5px;
 }
     `
-    style.type="text/css"
-    // style.innerText = '.tuia-box {height: 100%;}'
-    // style.innerText = styleText
-     // style.appendChild(document.createTextNode('.tuia-box {height: 100px;} .tuia-box .close{width: 30px;}'))
-    style.appendChild(document.createTextNode(styleText))
-    var head = document.getElementsByTagName('head')[0]
-    head.appendChild(style)
+    addStyle(styleText)
   </script>
 </body>
 </html>
