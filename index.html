@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="./load.js"></script>
+</head>
+<body>
+  <div class="tuia-box">
+  <a class='close-btn'>
+    <div class="close">test load script</div>
+  </a>
+</div>
+  <div class="tuia-box">test load script</div>
+  <script>
+    console.log('loadScript:', loadScript)
+    loadScript('./test.js', function () {
+      console.log('testInfo:', testInfo)
+      console.log('testName:', testName)
+    }, {
+      appKey: 'e8e29eo39d',
+      adSpaceId: '26966'
+    })
+    var style = document.createElement('style')
+    var styleText = `
+.tuia-box {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.tuia-box .close {
+  width: 30px;
+  height: 30px;
+  background-image: url(//yun.tuisnake.com/h5-mami/couponPrize/close.png);
+  background-size: 100% 100%;
+  background-color: #666;
+  border-radius: 50%;
+}
+
+.tuia-box .close-btn {
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+    `
+    style.type="text/css"
+    // style.innerText = '.tuia-box {height: 100%;}'
+    // style.innerText = styleText
+     // style.appendChild(document.createTextNode('.tuia-box {height: 100px;} .tuia-box .close{width: 30px;}'))
+    style.appendChild(document.createTextNode(styleText))
+    var head = document.getElementsByTagName('head')[0]
+    head.appendChild(style)
+  </script>
+</body>
+</html>
