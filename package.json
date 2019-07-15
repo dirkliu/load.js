@@ -1,0 +1,19 @@
+{
+  "name": "load",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loadJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirkliu/load.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirkliu/load.js/issues"
+  },
+  "homepage": "https://github.com/dirkliu/load.js#readme"
+}
